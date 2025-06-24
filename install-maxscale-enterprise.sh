@@ -24,7 +24,7 @@ sudo ./mariadb_es_repo_setup --token="CUSTOMER_DOWNLOAD_TOKEN" --apply --skip-se
 yum install maxscale
 Error: Unable to find a match: maxscale
 '
-# for now it needs to be install per:
+# for now it needs to be installed per:
 yum install maxscale-enterprise 
 
 # then start maxscale
@@ -50,3 +50,7 @@ sudo ./mariadb_es_repo_setup --token="CUSTOMER_DOWNLOAD_TOKEN" --apply --skip-se
 # [warning] Found existing file at /etc/apt/sources.list.d/mariadb.list. Moving to /etc/apt/sources.list.d/mariadb.list.old_4.disable
 # [info] Repository file successfully written to /etc/apt/sources.list.d/mariadb.list
 
+# If the above doesn't work, take the URL from the errormsg (including token),copy paste it in a browser (example URL your may be different)
+https://dlm.mariadb.com/repo/CUSTOMER_TOKEN_HERE/maxscale-enterprise/latest/apt/dists/bullseye/InRelease
+# copy/paste the new generated URL into the browser and login which should prompt to accept the agreement terms
+https://id.mariadb.com/tc/accept/19/?callback=https://dlm.mariadb.com/repo/CUSTOMER_TOKEN_HERE/maxscale-enterprise/latest/apt/dists/noble/InRelease
