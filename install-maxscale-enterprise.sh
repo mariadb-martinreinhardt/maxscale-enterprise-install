@@ -44,6 +44,8 @@ cat /var/log/maxscale/maxscale.log
 
 # To accept agreement terms, copy/paste the following url into a browser, login and accecpt the agreement terms
 https://id.mariadb.com/tc/accept/20/ 
+# or 
+https://id.mariadb.com/account/
 
 # then run the mariadb_es_repo_setup again it should succeed as per example below
 sudo ./mariadb_es_repo_setup --token="CUSTOMER_DOWNLOAD_TOKEN" --apply --skip-server --skip-tools --mariadb-maxscale-version="25.01"
